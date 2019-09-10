@@ -31,7 +31,7 @@ class SignIn extends Component {
     localStorage.setItem('bookmarks', JSON.stringify(res.data[0].bookmarks))
     this.setState({ user: true })
     window.location.reload()
-    window.location.href = "http://localhost:3000/"
+    window.location.href = "https://showsfinder-app.herokuapp.com/"
     }else{
       this.setState({
         user:false
