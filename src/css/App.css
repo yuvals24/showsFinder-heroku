@@ -1,0 +1,469 @@
+.App {
+  font-family: Arimo;
+  background-color: #ecf0f1;
+}
+
+body {
+  background-color: #ecf0f1;
+}
+
+
+@media only screen and (max-width: 500px) {
+  #nav-bar {
+    background-color: #077C91;
+    height: 10vw;
+    width: 100%;
+    display: flex;
+    flex-direction: row ; 
+    font-family: Montserrat;
+    text-align: center;
+    position: fixed;
+    z-index: 2000;
+    font-family: Arimo;
+    margin-top: -10vw;
+  }
+  
+  .NavLinks{
+    display: flex;
+    flex-direction: row ; 
+    margin-left: 45% ;
+    line-height: 3vw;
+  
+  }
+  
+  .NavLinks div {
+  width: 25vw;
+  text-align: center;
+  padding-top: 1.5vh;
+  font-size: 3.5vw;
+  }
+  
+  #nav-bar span {
+    font-weight: bold;
+    margin-left: 1% ;
+    padding-top: 0.5vh;
+    font-size: 5vw; 
+    margin-right: -1.5vw;
+  }
+  .logo {
+    color:white;
+    text-decoration: none;
+    text-align: center;
+  }
+  
+  .logo:hover {
+    border-radius: 1vw;
+    background-color: #2CA6D6;
+    transition: 0.3s;
+  }
+  
+  .logo:active {
+    border-radius: 1vw;
+    background-color: rgb(30, 97, 124);
+  }
+  
+  .link {
+    color:white;
+    text-decoration: none;
+    text-align: center;
+    }
+
+  .link:hover {
+      color: #2CA6D6;
+      transition: 0.3s;
+    }
+  
+      .search {
+        width: 40vw;
+        height: 4.5vw;
+        border: none;
+        background-color: white;
+        font-size: 4.5vw;
+        font-family: Arimo;
+        position: absolute;
+        margin-left: 32vw;
+        z-index: 40000;
+        border-radius: 2vw;
+        padding-left: 1vw;
+        margin-top: -1vw;
+      }
+      
+      .search::placeholder {
+        color:black;
+      }
+      
+      .dropDownBox{
+        margin-top: -1vw;
+      }
+  
+    ::-webkit-input-placeholder  {
+      color: white;
+    }
+    
+    .dropFilterLoc {
+      width: 15vw;
+      height: 3vw;
+      background-color: #37819B;
+      border: none;
+      margin-left: 1vw;
+      margin-top: -5vw;
+      font-size: 2vw;
+    }
+  
+    .dropFilterDate {
+      width: 15vw;
+      height: 3vw;
+      background-color: #37819B;
+      border: none;
+      margin-left: 5vw;
+      margin-bottom: 5vw;
+      font-size: 2vw;
+    }
+    
+    .slider {
+      -webkit-appearance: none;
+      appearance: none;
+      margin-top: 0px;
+      width: 90%; 
+      height: 1.2vw;
+      border-radius: 5vw; 
+      background: #F2F2F2; 
+      outline: none; 
+      opacity: 0.7; 
+      -webkit-transition: .2s; 
+      transition: opacity .2s;
+    }
+    
+    .slider:hover {
+      opacity: 1; 
+    }
+    
+    .slider::-webkit-slider-thumb {
+      -webkit-appearance: none; 
+      appearance: none;
+      width: 3vw; 
+      height: 3vw; 
+      border-radius: 20vw;
+      background: #CECECE; 
+      cursor: pointer; 
+    }
+    
+    .filterNum {
+      font-size: 3.5vw;
+    }
+    
+    #filterBox {
+      background-color: rgb(43, 101, 122);
+      width: 40vw;
+      height: 13vw;
+      position: absolute;
+      margin-top: 4vw;
+      margin-left: 33vw;
+      transition: 0.3s;
+      border-bottom-left-radius: 0.5vw;
+      border-bottom-right-radius: 0.5vw;
+      animation: fade 0.3s linear forwards;
+    }
+    
+    .fixedMenu {
+      position: fixed;
+      background-color: black;
+      top: 0;
+      z-index: 50000;
+      margin-top: 2.5vw;
+      transition: 0.3s;
+    }
+    
+      .fa-chevron-down {
+        position: absolute;
+        width: 10vw;
+        height: 5.1vw;
+        background-color: rgb(142, 216, 243);
+        font-size: 5vw;
+        color:white;
+        cursor: pointer;
+        margin-left: 63vw;
+        z-index: 70000;
+        border-radius: 3vw;
+        padding-left: 1vw;
+        margin-top: -1vw;
+      }
+        
+      .fa-chevron-down:hover {
+        background-color:rgb(68, 162, 196);
+        transition: 0.3s;
+      }
+        
+      .fa-chevron-down:active {
+        background-color:#37819B;
+      }
+        
+      .fa-chevron-up {
+        position: absolute;
+        width: 10vw;
+        height: 5.1vw;
+        background-color: rgb(142, 216, 243);
+        font-size: 5vw;
+        color:white;
+        cursor: pointer;
+        margin-left: 63vw;
+        z-index: 70000;
+        border-radius: 3vw;
+        padding-left: 1vw;
+        margin-top: -1vw;
+      }
+      @keyframes fade {
+        from {
+          opacity: 0.5;
+          visibility: hidden;
+        }
+        to { 
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+        .fa-chevron-up:hover {
+          background-color:rgb(68, 162, 196);
+          transition: 0.3s;
+        }
+        
+        .fa-chevron-up:active {
+          background-color:#37819B;
+        }
+}
+
+
+
+
+
+
+/* Desktop Styles */
+@media only screen and (min-width: 700px) {
+#nav-bar {
+  background-color: #077C91;
+  height: 3.5vw;
+  width: 100%;
+  display: flex;
+  flex-direction: row ; 
+  font-family: Montserrat;
+  text-align: center;
+  position: fixed;
+  z-index: 2000;
+  font-family: Arimo;
+}
+
+.NavLinks{
+  display: flex;
+  flex-direction: row ; 
+  margin-left: 70% ;
+  line-height: 3vw;
+
+}
+
+.NavLinks div {
+width: 15vw;
+text-align: center;
+padding-top: 0.5vh;
+font-size: 1.5vw;
+}
+
+#nav-bar span {
+  font-weight: bold;
+  padding-top: 0.5vh;
+  font-size: 2.5vw; 
+  margin-right: -2vw;
+}
+.logo {
+  color:white;
+  text-decoration: none;
+  text-align: center;
+  margin-left: 1vw;
+}
+
+.logo:hover {
+  border-radius: 1vw;
+  color: #2CA6D6;
+  transition: 0.3s;
+}
+
+
+.link {
+  color:white;
+  text-decoration: none;
+  text-align: center;
+  }
+
+  .link:hover {
+    color: #2CA6D6;
+    transition: 0.3s;
+  }
+
+    .search {
+      width: 40vw;
+      height: 2vw;
+      border: none;
+      background-color: white;
+      font-size: 2vw;
+      font-family: Arimo;
+      position: absolute;
+      margin-left: 30vw;
+      z-index: 40000;
+      animation: fade 0.3s linear forwards;
+      border-radius: 2vw;
+      padding-left: 1vw;
+    }
+
+    .search::placeholder {
+      color:black;
+    }
+
+    @keyframes fade {
+      from {
+        opacity: 0.5;
+        visibility: hidden;
+      }
+      to { 
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+
+   
+  ::-webkit-input-placeholder  {
+    color: white;
+  }
+
+  .dropDownBox{
+    margin-top: 1vw;
+  }
+  
+  .dropFilterLoc {
+    width: 15vw;
+    height: 2vw;
+    background-color: #37819B;
+    border: none;
+    margin-left: 1vw;
+    font-size: 2vw;
+  }
+
+  .dropFilterDate {
+    width: 15vw;
+    height: 2vw;
+    background-color: #37819B;
+    border: none;
+    margin-left: 5vw;
+    margin-bottom: 5vw;
+    font-size: 2vw;
+  }
+  
+  .slider {
+    -webkit-appearance: none;
+    appearance: none;
+    margin-top: 0px;
+    width: 70%; 
+    height: 0.5vw;
+    border-radius: 5vw; 
+    background: #F2F2F2; 
+    outline: none; 
+    opacity: 0.7; 
+    -webkit-transition: .2s; 
+    transition: opacity .2s;
+  }
+  
+  .slider:hover {
+    opacity: 1; 
+  }
+  
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none; 
+    appearance: none;
+    width: 1.5vw; 
+    height: 1.5vw; 
+    border-radius: 20vw;
+    background: #CECECE; 
+    cursor: pointer; 
+  }
+  
+  .filterNum {
+    font-size: 2vw;
+  }
+  
+  #filterBox {
+    background-color: rgb(43, 101, 122);
+    width: 40vw;
+    height: 8vw;
+    position: absolute;
+    margin-top: 2vw;
+    margin-left: 30.5vw;
+    transition: 0.3s;
+    border-bottom-left-radius: 0.5vw;
+    border-bottom-right-radius: 0.5vw;
+    animation: fade 0.3s linear forwards;
+  }
+  
+  .fixedMenu {
+    position: fixed;
+    z-index: 50000;
+    margin-top: 0.5vw;
+    animation: fade 0.3s linear forwards;
+  }
+  
+    .fa-chevron-down {
+      position: absolute;
+      width: 5vw;
+      height: 2.1vw;
+      background-color: rgb(142, 216, 243);
+      font-size: 2.5vw;
+      color:white;
+      cursor: pointer;
+      margin-left: 66vw;
+      z-index: 70000;
+      border-radius: 3vw;
+      animation: fade 0.3s linear forwards;
+      
+    }
+      
+    .fa-chevron-down:hover {
+      background-color:rgb(68, 162, 196);
+      transition: 0.3s;
+    }
+      
+    .fa-chevron-down:active {
+      background-color:rgb(73, 175, 212);
+    }
+      
+    .fa-chevron-up {
+      width: 5vw;
+      height: 2.1vw;
+      background-color: rgb(142, 216, 243);
+      font-size: 2.5vw;
+      color:white;
+      cursor: pointer;
+      position: absolute;
+      margin-left: 66vw;
+      z-index: 70000;
+      border-radius: 3vw;
+      animation: fade 0.3s linear forwards;
+    }
+      
+      .fa-chevron-up:hover {
+        background-color:rgb(68, 162, 196);
+        transition: 0.3s;
+      }
+      
+      .fa-chevron-up:active {
+        background-color:#37819B;
+      }
+    }
+
+    .logout{
+     margin-top: 3vw; 
+    }
+
+    .pigeon{
+      text-align: center;
+      margin-top: 100px; 
+    }
+  .img{
+    width: 100%
+  }
