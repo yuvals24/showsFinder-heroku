@@ -31,7 +31,7 @@ class Pigeon extends Component{
 class App extends Component {
 
   componentDidMount = async () => {
-    let data = await axios.get('http://localhost:8080')
+    let data = await axios.get('/')
     this.props.Datastore.getdata(data.data)
     this.props.Datastore.updateStore(data.data)
   }

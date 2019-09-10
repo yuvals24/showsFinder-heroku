@@ -10,7 +10,6 @@ let axios = require('axios')
 const gis = require('g-i-s');
 const nodemailer = require('nodemailer');
 
-
 async function filterDataBeforeInsert() {
     Show.find({}, async function (err, response) {
         for (let i of response) {

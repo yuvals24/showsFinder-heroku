@@ -29,4 +29,3 @@ app.get('*', function (req, res) {
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/showsFinder', { useNewUrlParser: true }).then(() => {
     app.listen(port, () => console.log(`Running server on port ${port}`))
 })
-
