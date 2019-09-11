@@ -5,7 +5,7 @@ const Show = require('../model/Show')
 const User = require('../model/User')
 const translate = require('translate');
 translate.engine = 'yandex';
-const apiKey = 'AIzaSyCGWtIvgmg591qoFrD9purXMv9ShSQ1iAk'
+const apiKey = 'AIzaSyBrxb-nSV0JL1UtoxXtbLIHFuE4p3EnliY'
 let axios = require('axios')
 const gis = require('g-i-s');
 const nodemailer = require('nodemailer');
@@ -87,7 +87,6 @@ setInterval(filterDataBeforeInsert, 14400000);
 
 router.get('/home', (req, res) => {
     Show.find({}, function (err, response) {
-        console.log(response)
         res.send(response)
     })
 })
