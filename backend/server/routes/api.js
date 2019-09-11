@@ -85,7 +85,7 @@ filterDataBeforeInsert()
 setInterval(filterDataBeforeInsert, 14400000);
 
 
-router.get('/', (req, res) => {
+router.get('/home', (req, res) => {
     Show.find({}, function (err, response) {
         res.send(response)
     })
