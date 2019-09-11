@@ -17,7 +17,7 @@ class ShowPage extends Component {
             
             let email=await localStorage.getItem('email')
           let user=  await axios.put(`/payment/${this.props.show.name}/${this.props.show.amountLeft}/${email}`)
-            let data = await axios.get('/')
+            let data = await axios.get('/home')
             this.props.Datastore.getdata(data.data)
             this.props.Datastore.updateStore(data.data)
             localStorage.setItem('keypurchasedShows', JSON.stringify(user.data.purchasedShows))

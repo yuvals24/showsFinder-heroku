@@ -7,7 +7,7 @@ import Search from './search'
 @observer
 class Navbar extends Component {
     loadData = async () => {
-        let data = await axios.get('/')
+        let data = await axios.get('/home')
         this.props.Datastore.getdata(data.data)
         this.props.Datastore.updateStore(data.data)
     }
@@ -15,7 +15,7 @@ class Navbar extends Component {
         
         return (
             <div id="nav-bar">
-                <span onClick={this.loadData} ><Link to='/' className='logo'>ShowsFinder</Link></span>
+                <span onClick={this.loadData} ><Link to='/home' className='logo'>ShowsFinder</Link></span>
                 <Search />
                 <div className='NavLinks'>
                   {localStorage.getItem('name') ? <div><Link to='/Profile' className='link' >Hello, {localStorage.getItem('name')}!</Link></div> : <div><Link to='/SignInUp' className='link' ><i class="fas fa-user"></i> Sign In</Link></div>}

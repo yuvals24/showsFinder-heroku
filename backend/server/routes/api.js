@@ -87,6 +87,7 @@ setInterval(filterDataBeforeInsert, 14400000);
 
 router.get('/home', (req, res) => {
     Show.find({}, function (err, response) {
+        console.log(response)
         res.send(response)
     })
 })
