@@ -37,12 +37,11 @@ class App extends Component {
   }
 
   render() {
-
     return (
       <Router>
         <div className="App">
           <Navbar/>
-          <div className='mainContainer'> {this.props.Datastore.showsfilter.filter(n => n.name.includes(this.props.Filterstore.name)).map(s => <Route exact path="/" render={() => <Show show={s} />} />)}</div>
+          <div className='mainContainer'> {this.props.Datastore.showsfilter.length>0?this.props.Datastore.showsfilter.filter(n => n.name.includes(this.props.Filterstore.name)).map(s => <Route exact path="/" render={() => <Show show={s} />} />) : null}</div>
           <Route path="/inform/:show" exact render={({ match }) => <ShowPage match={match} show={this.props.Datastore.showinfo} />} />
           <Route exact path="/SignInUp" component={SignInUp}></Route>
           <Route exact path="/Profile" component={Profile}></Route>
