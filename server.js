@@ -10,7 +10,7 @@ const path = require ('path')
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
 
-app.use(express.static(path.join(__dirname, 'build')));
+app.use(express.static(path.join(__dirname, 'scripts', 'start.js')));
 
 // app.use(function (req, res, next) {
 //     res.header('Access-Control-Allow-Origin', '*')
@@ -23,7 +23,7 @@ app.use(express.static(path.join(__dirname, 'build')));
 app.use('/', router)
 
 app.get('*', function (req, res) {
-    res.sendFile(path.join(__dirname, 'build', 'index.html'));
+    res.sendFile(path.join(__dirname, 'scripts', 'start.js'));
 });
 
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/showsFinder', { useNewUrlParser: true }).then(() => {
